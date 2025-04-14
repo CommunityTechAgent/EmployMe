@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Application: {{jobTitle}} at {{company}}</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .header {
+      margin-bottom: 20px;
+    }
+    .contact-info {
+      margin-bottom: 30px;
+    }
+    .cover-letter {
+      margin-bottom: 30px;
+      white-space: pre-line;
+    }
+    .additional-message {
+      margin-bottom: 30px;
+      white-space: pre-line;
+    }
+    .signature {
+      margin-top: 30px;
+    }
+    .footer {
+      margin-top: 40px;
+      font-size: 12px;
+      color: #666;
+      border-top: 1px solid #eee;
+      padding-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <p>Dear {{recipientName}},</p>
+  </div>
+  
+  <div class="cover-letter">
+    {{coverLetter}}
+  </div>
+  
+  {{#if additionalMessage}}
+  <div class="additional-message">
+    {{additionalMessage}}
+  </div>
+  {{/if}}
+  
+  <div class="signature">
+    <p>Sincerely,</p>
+    <p>{{userName}}</p>
+    <p>{{userEmail}} | {{userPhone}}</p>
+  </div>
+  
+  <div class="footer">
+    <p>This email was sent through the JobHub platform. Please do not reply directly to this email.</p>
+  </div>
+</body>
+</html> 
